@@ -109,5 +109,3 @@ fará diferença no desempenho, além de ser mais didático */
         sqlDb.delete(TABELA_DISCIPLINA, "$ATRIBUTO_CODIGO = ?", arrayOf(codigo))
     }
 }
-    }
-}
