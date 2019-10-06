@@ -2,6 +2,8 @@ package br.edu.ifsp.scl.meucursosdm.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.ContextMenu
+import android.view.View
 import br.edu.ifsp.scl.meucursosdm.R
 import br.edu.ifsp.scl.meucursosdm.adapter.DisciplinasAdapter
 import br.edu.ifsp.scl.meucursosdm.controller.CursoController
@@ -49,5 +51,13 @@ class MainActivity : AppCompatActivity() {
         listaDisciplinas.addAll(listaAtualizada)
         // Notifica o Adapter das mudanças na sua fonte de daddos
         disciplinasAdapter.notifyDataSetChanged()
+    }
+
+    override fun onCreateContextMenu(
+        menu: ContextMenu?,
+        v: View?,
+        menuInfo: ContextMenu.ContextMenuInfo?
+    ) {
+        menuInflater.inflate(R.menu.menu_contexto, menu)
     }
 }
