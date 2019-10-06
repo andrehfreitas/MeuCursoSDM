@@ -2,10 +2,11 @@ package br.edu.ifsp.scl.meucursosdm.controller
 
 import br.edu.ifsp.scl.meucursosdm.view.MainActivity
 import br.edu.ifsp.scl.meucursosdm.model.Disciplina
+import br.edu.ifsp.scl.meucursosdm.model.DisciplinaDAO
 import br.edu.ifsp.scl.meucursosdm.model.DisciplinaSqlite
 
 class CursoController(val mainActivity: MainActivity) {
-    val disciplinaDao: DisciplinaDao
+    val disciplinaDao: DisciplinaDAO
     init {
         disciplinaDao = DisciplinaSqlite(mainActivity)
     }

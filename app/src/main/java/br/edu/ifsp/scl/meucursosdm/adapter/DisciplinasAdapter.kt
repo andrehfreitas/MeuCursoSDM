@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.TextView
+import br.edu.ifsp.scl.meucursosdm.R
 import br.edu.ifsp.scl.meucursosdm.view.MainActivity
 import br.edu.ifsp.scl.meucursosdm.model.Disciplina
 
@@ -20,12 +21,7 @@ class DisciplinasAdapter(val activity: MainActivity, // Contexto
         layoutInflater =
             activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE)
                     as LayoutInflater
-        MainActivity DisciplinasAdapter
-                getView
-        view
-        listaDisciplinas
-        get
-        disciplina
+
     }
     /* Chamado automaticamente sempre que uma nova view for necessária, ou seja,
     quando uma View sai da tela e outra aparece, rolagem do ListView */

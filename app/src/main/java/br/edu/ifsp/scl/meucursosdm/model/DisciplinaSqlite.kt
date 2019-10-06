@@ -79,8 +79,8 @@ fará diferença no desempenho, além de ser mais didático */
     }
     // Converte uma linha do Cursor para uma objeto de Disciplina
     private fun linhaCursorParaDisciplina(cursor: Cursor): Disciplina {
-        return Disciplina(cursor.getString(
-            cursor.getColumnIndex(ATRIBUTO_CODIGO)),
+        return Disciplina(
+            cursor.getString(cursor.getColumnIndex(ATRIBUTO_CODIGO)),
             cursor.getString(cursor.getColumnIndex(ATRIBUTO_NOME)),
             cursor.getString(cursor.getColumnIndex(ATRIBUTO_EMENTA))
         )

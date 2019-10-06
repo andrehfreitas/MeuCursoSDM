@@ -34,4 +34,20 @@ class MainActivity : AppCompatActivity() {
         // Solicitando todas as disciplinas para o Controller
         cursoController.buscaTodas()
     }
+
+    private fun insereDisciplinasFalsas() {
+        for (i in 1..50) {
+            val d = Disciplina("D${i}", "Disciplina ${i}", "Ementa ${i}")
+            cursoController.insereDisciplina(d)
+        }
+    }
+
+    fun atualizaLista(listaAtualizada: List<Disciplina>) {
+        // Limpa lista anterior (abordagem de teste)
+        listaDisciplinas.clear()
+        // Adiciona os elementos retornados pelo Controller
+        listaDisciplinas.addAll(listaAtualizada)
+        // Notifica o Adapter das mudanças na sua fonte de daddos
+        disciplinasAdapter.notifyDataSetChanged()
+    }
 }
