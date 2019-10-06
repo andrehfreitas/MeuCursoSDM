@@ -40,6 +40,9 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemClickListener {
 
         // Solicitando todas as disciplinas para o Controller
         cursoController.buscaTodas()
+
+        // Setando listener de clique nos itens
+        disciplinasLv.setOnItemClickListener(this)
     }
 
     private fun insereDisciplinasFalsas() {
