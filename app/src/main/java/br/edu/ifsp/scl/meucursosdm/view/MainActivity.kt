@@ -1,5 +1,6 @@
 package br.edu.ifsp.scl.meucursosdm.view
 
+import android.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.ContextMenu
@@ -78,5 +79,19 @@ class MainActivity : AppCompatActivity(), AdapterView.OnItemClickListener {
         }
 
         return true
+    }
+
+    override fun onItemClick(parent: AdapterView<*>?,
+                             view: View?, position: Int, id: Long) {
+        val disciplina = listaDisciplinas[position]
+        // Criando um AlertDialog para mostrar a ementa da disciplina
+        val ementaDialog = with(AlertDialog.Builder(this)) {
+            setTitle(disciplina.codigo)
+            setMessage("${disciplina.nome} :\n ${disciplina.ementa}")
+            create()
+        }
+
+        // Mostrando AlertDialog
+        ementaDialog.show()
     }
 }
