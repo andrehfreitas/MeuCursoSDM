@@ -1,6 +1,6 @@
 package br.edu.ifsp.scl.meucursosdm.controller
 
-import br.edu.ifsp.scl.meucursosdm.MainActivity
+import br.edu.ifsp.scl.meucursosdm.view.MainActivity
 import br.edu.ifsp.scl.meucursosdm.model.Disciplina
 import br.edu.ifsp.scl.meucursosdm.model.DisciplinaSqlite
 

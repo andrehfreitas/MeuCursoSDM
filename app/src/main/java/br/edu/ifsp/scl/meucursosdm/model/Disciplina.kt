@@ -4,6 +4,4 @@ data class Disciplina {
     val codigo: String = ""
     val nome: String = ""
     val ementa: String = ""
-
-
 }

@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
 import android.widget.TextView
-import br.edu.ifsp.scl.meucursosdm.MainActivity
+import br.edu.ifsp.scl.meucursosdm.view.MainActivity
 import br.edu.ifsp.scl.meucursosdm.model.Disciplina
 
 class DisciplinasAdapter(val activity: MainActivity, // Contexto
