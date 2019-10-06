@@ -3,7 +3,10 @@ package br.edu.ifsp.scl.meucursosdm.view
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.ContextMenu
+import android.view.MenuItem
 import android.view.View
+import android.widget.AdapterView
+import android.widget.Toast
 import br.edu.ifsp.scl.meucursosdm.R
 import br.edu.ifsp.scl.meucursosdm.adapter.DisciplinasAdapter
 import br.edu.ifsp.scl.meucursosdm.controller.CursoController
@@ -59,5 +62,20 @@ class MainActivity : AppCompatActivity() {
         menuInfo: ContextMenu.ContextMenuInfo?
     ) {
         menuInflater.inflate(R.menu.menu_contexto, menu)
+    }
+
+    override fun onContextItemSelected(item: MenuItem): Boolean {
+        // Traz informações sobre o item que foi clicado
+        val info = item.menuInfo as AdapterView.AdapterContextMenuInfo
+        when(item.itemId) {
+            R.id.deletarMenuItem -> {
+                // Chama Controller para remover disciplina
+                cursoController.remove(listaDisciplinas[info.position].codigo)
+                Toast.makeText(this, "${listaDisciplinas[info.position].nome}",
+                    Toast.LENGTH_SHORT).show()
+            }
+        }
+
+        return true
     }
 }
