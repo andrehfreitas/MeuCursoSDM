@@ -13,7 +13,7 @@ import br.edu.ifsp.scl.meucursosdm.controller.CursoController
 import br.edu.ifsp.scl.meucursosdm.model.Disciplina
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), AdapterView.OnItemClickListener {
 
     lateinit var listaDisciplinas: MutableList<Disciplina>
     lateinit var disciplinasAdapter: DisciplinasAdapter
